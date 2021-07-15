@@ -1,0 +1,22 @@
+{
+  "name": "node-express",
+  "version": "1.0.0",
+  "description": "CRUD Exercises",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/limnhep/node_express.git"
+  },
+  "author": "Lim E. Nhep",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/limnhep/node_express/issues"
+  },
+  "homepage": "https://github.com/limnhep/node_express#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
