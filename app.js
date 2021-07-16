@@ -75,6 +75,50 @@ app.post('/api/v1/tours', (req, res) => {
     })
 });
 
+// --- UPDATE A TOUR ---
+
+app.patch('/api/v1/tours/:id', (req, res) => {
+  const id = Number(req.params.id);
+  if (id > toursJSON.length) {
+    return res
+      .status(404)
+      .json({
+        status: 'Fail',
+        message: 'Invalid ID'
+      })
+  }
+
+  res
+    .status(200)
+    .json({
+      status: 'Success',
+      data: {
+        tour: '<Update the data...>'
+      }
+    })
+});
+
+// --- DELETE A TOUR ---
+
+app.delete('/api/v1/tours/:id', (req, res) => {
+  const id = Number(req.params.id);
+  if (id > toursJSON.length) {
+    return res
+      .status(404)
+      .json({
+        status: 'Fail',
+        message: 'Invalid ID'
+      })
+  }
+
+  res
+    .status(204)
+    .json({
+      status: 'Sucess',
+      data: null
+    })
+})
+
 const port = 3000;
 app.listen(port, () => {
   console.log(`Listening on Port: ${port}`);
