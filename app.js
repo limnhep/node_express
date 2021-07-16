@@ -28,6 +28,21 @@ app.get('/api/v1/tours', (req, res) => {
     })
 })
 
+// --- READ A TOUR ---
+
+app.get('/api/v1/tours/:id', (req, res) => {
+  // console.log(req.params);
+  const id = Number(req.params.id);
+  const tour = toursJSON.find(el => el.id === id);
+
+  res
+    .status(200)
+    .json({
+      status: 'Success',
+      tour: tour
+    })
+});
+
 app.post('/api/v1/tours', (req, res) => {
   // console.log(req.body);
   const newId = toursJSON[toursJSON.length - 1].id + 1;
